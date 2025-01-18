@@ -1,0 +1,25 @@
+.logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo_left p {
+    font-size: 40px;
+}
+
+.logo_right p {
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px var(--side-padding);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
