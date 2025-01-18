@@ -1,7 +1,12 @@
+@font-face{
+    font-family: Garet;
+    src: url(../font/ofont.ru_Garet.ttf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Garet;
 }
 
 html, body {
@@ -11,21 +16,24 @@ html, body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
-:root{}
+:root{
+    --black: rgb(22, 22, 22);
+    --blue: rgb(0, 115, 255);
+    --light-gray: rgb(234, 234, 234);
+    --white: rgb(244, 244, 244);
+    --side-padding: 8%;
+}
 
 button {
-    color: white;
-    background-color: blue;
+    color: var(--white);
+    background-color: var(--blue);
     border-radius: 30%;
 }
 
-h1 {
-    font-size: 2rem;
-}
+h1 {font-size: 2rem;}
+p {font-size: 1rem;}
 
-p {
-    font-size: 1rem;
-}
+/* .... */
