@@ -84,7 +84,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
 }
 
 .iimg5 {
@@ -92,10 +92,13 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
 }
 
-.iimg1:hover,
+.iimg1:hover {
+    background-image: url(../img/info1.2.jpg);
+}
+
 .iimg5:hover {
-    filter: brightness(80%) blur(1px);
+    background-image: url(../img/info2.2.jpg);
 }
