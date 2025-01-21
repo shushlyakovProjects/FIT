@@ -39,6 +39,9 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center center;
 }
 .ibig {
     grid-column-start: span 2;
@@ -53,22 +56,29 @@ nav {
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    transition-timing-function: linear;
+    overflow: hidden;
 }
-.info_item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    user-select: none;
+.info_item>*{
+    pointer-events: none;
 }
 .iimg1 {
     background-image: url(../img/info1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition-duration: 0.5s;
 }
 .iimg5 {
     background-image: url(../img/info2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition-duration: 0.5s;
+}
+.iimg1:hover,
+.iimg5:hover {
+    filter: brightness(80%);
 }
