@@ -25,3 +25,50 @@ nav {
     display: flex;
     gap: 20px;
 }
+
+/* Info block */
+.info {
+    width: 100%;
+    padding: 0 var(--side-padding);
+}
+.info h1 {
+    margin-bottom: 40px;
+}
+.info_body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+.ibig {
+    grid-column-start: span 2;
+}
+.info_item {
+    height: 35vh;
+    background-color: var(--white);
+    padding: 0 10% 0 4%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+.info_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+.iimg1 {
+    background-image: url(../img/info1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.iimg5 {
+    background-image: url(../img/info2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
