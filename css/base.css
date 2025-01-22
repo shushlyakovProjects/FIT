@@ -35,8 +35,6 @@ a {
     font-size: 1rem;
 }
 
-a:hover {}
-
 :root {
     --black: rgb(22, 22, 22);
     --blue: rgb(0, 115, 255);
