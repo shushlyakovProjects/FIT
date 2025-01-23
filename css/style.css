@@ -1,7 +1,10 @@
+/* Header */
+
 .logo {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+
     user-select: none;
 }
 
@@ -15,13 +18,59 @@
 }
 
 header {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 15px var(--side-padding);
+    position: absolute;
 }
 
 nav {
     display: flex;
     gap: 20px;
+
+    user-select: none;
+}
+
+nav a {
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    color: rgb(100, 100, 100);
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+
+    padding: 5% var(--side-padding);
+}
+
+.welcome_body {
+    width: 100%;
+    height: 100%;
+    
+    background-image: url(/img/welcome.jpeg);
+    background-size: cover;
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.welcome_content {
+    color: white;
+}
+
+.welcome_content h1 {
+    padding-bottom: 20px;
+}
+
+.welcome_content p {
+    padding-bottom: 20px;
 }
