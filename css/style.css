@@ -25,7 +25,8 @@ header {
     align-items: center;
 
     padding: 15px var(--side-padding);
-    position: absolute;
+    position: fixed;
+    z-index: 100;
 }
 
 header a {
@@ -217,4 +218,58 @@ nav a:hover {
 
 .iimg5:hover {
     background-image: url(../img/info2.2.jpg);
+}
+
+/* About us block */
+.about {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 30px 30px 0 0;
+    padding: 2% var(--side-padding);
+    margin-top: 30px;
+}
+.about h1 {
+    margin-bottom: 20px;
+}
+.about-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+}
+.about-body-img {
+    width: 100%;
+    height: 40vh;
+    border-radius: 30px 0 0 30px;
+    background-color: var(--light-gray);
+}
+.about-body-img img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.about-body-text {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--light-gray);
+    padding: var(--side-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.abt2 {
+    border-radius: 30px 0 0 30px;
+}
+.abi2 {
+    border-radius: 0 30px 30px 0;
+}
+.about-body-text p:first-child {
+    background-color: var(--blue);
+    padding: 15px 20px;
+    border-radius: 20px;
+    color: white;   
 }

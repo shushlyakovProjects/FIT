@@ -13,3 +13,8 @@ collectionItem.forEach((item) => {
         `
     })
 })
+
+const header = document.querySelector('header')
+window.addEventListener('scroll', (event) => {
+    
+})
