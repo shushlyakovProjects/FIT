@@ -28,6 +28,16 @@ header {
     position: absolute;
 }
 
+header a {
+    transition-duration: 0.5s;
+}
+
+header a:hover {
+    transform: translateY(-3px);
+    color: gray;
+    letter-spacing: 0.5px;
+}
+
 nav {
     display: flex;
     gap: 20px;
@@ -73,4 +83,138 @@ nav a:hover {
 
 .welcome_content p {
     padding-bottom: 20px;
+}
+
+/* Info block */
+.info {
+    width: 100%;
+    padding: 0 var(--side-padding);
+}
+
+.info h1 {
+    margin-bottom: 40px;
+}
+
+.info_body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center center;
+}
+
+.ibig {
+    grid-column-start: span 2;
+}
+
+.info_item {
+    height: 35vh;
+    background-color: var(--white);
+    padding: 0 10% 0 4%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    overflow: hidden;
+}
+
+.info_item>* {
+    pointer-events: none;
+}
+
+.iimg1 {
+    background-image: url(../img/info1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg5 {
+    background-image: url(../img/info2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg1:hover {
+    background-image: url(../img/info1.2.jpg);
+}
+
+.iimg5:hover {
+    background-image: url(../img/info2.2.jpg);
+}
+
+/* Info block */
+.info {
+    width: 100%;
+    padding: 0 var(--side-padding);
+}
+
+.info h1 {
+    margin-bottom: 40px;
+}
+
+.info_body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center center;
+}
+
+.ibig {
+    grid-column-start: span 2;
+}
+
+.info_item {
+    height: 35vh;
+    background-color: var(--white);
+    padding: 0 10% 0 4%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    overflow: hidden;
+}
+
+.info_item>* {
+    pointer-events: none;
+}
+
+.iimg1 {
+    background-image: url(../img/info1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg5 {
+    background-image: url(../img/info2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg1:hover {
+    background-image: url(../img/info1.2.jpg);
+}
+
+.iimg5:hover {
+    background-image: url(../img/info2.2.jpg);
 }
