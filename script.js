@@ -13,10 +13,3 @@ collectionItem.forEach((item) => {
         `
     })
 })
-const body = document.querySelector('body')
-function ready(){
-    body.style.cssText = `transform: translateY(0%);`
-}
-setInterval(() => {
-    document.addEventListener("DOMContentLoaded", ready)
-}, 1000);
