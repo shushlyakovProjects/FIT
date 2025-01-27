@@ -11,13 +11,13 @@
     font-family: Garet;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
 
     background-color: var(--light-gray);
 }
+
 html {
     font-size: 16px;
 }
