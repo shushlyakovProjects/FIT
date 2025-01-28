@@ -1,7 +1,10 @@
+/* Header */
+
 .logo {
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+
     user-select: none;
 }
 
@@ -15,10 +18,16 @@
 }
 
 header {
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 15px var(--side-padding);
+    position: fixed;
+    z-index: 100;
+    transition-duration: 0.5s;
 }
 
 header a {
@@ -34,6 +43,48 @@ header a:hover {
 nav {
     display: flex;
     gap: 20px;
+
+    user-select: none;
+}
+
+nav a {
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    color: rgb(100, 100, 100);
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+
+    padding: 5% var(--side-padding);
+}
+
+.welcome_body {
+    width: 100%;
+    height: 100%;
+    
+    background-image: url(/img/welcome.jpeg);
+    background-size: cover;
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.welcome_content {
+    color: white;
+}
+
+.welcome_content h1 {
+    padding-bottom: 20px;
+}
+
+.welcome_content p {
+    padding-bottom: 20px;
 }
 
 /* Info block */
@@ -101,4 +152,150 @@ nav {
 
 .iimg5:hover {
     background-image: url(../img/info2.2.jpg);
+}
+
+/* Info block */
+.info {
+    width: 100%;
+    padding: 0 var(--side-padding);
+}
+
+.info h1 {
+    margin-bottom: 40px;
+}
+
+.info_body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    perspective-origin: center center;
+}
+
+.ibig {
+    grid-column-start: span 2;
+}
+
+.info_item {
+    height: 35vh;
+    background-color: var(--white);
+    padding: 0 10% 0 4%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    overflow: hidden;
+}
+
+.info_item>* {
+    pointer-events: none;
+}
+
+.iimg1 {
+    background-image: url(../img/info1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg5 {
+    background-image: url(../img/info2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition-duration: 0.5s;
+}
+
+.iimg1:hover {
+    background-image: url(../img/info1.2.jpg);
+}
+
+.iimg5:hover {
+    background-image: url(../img/info2.2.jpg);
+}
+
+/* About us block */
+.about {
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 30px 30px 0 0;
+    padding: 2% var(--side-padding);
+    margin-top: 30px;
+}
+.about h1 {
+    margin-bottom: 20px;
+}
+.about-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    row-gap: 20px;
+}
+.about-body-img {
+    width: 100%;
+    border-radius: 30px 0 0 30px;
+    background-color: var(--light-gray);
+}
+.about-body-img img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.about-body-text {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--light-gray);
+    padding: var(--side-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.abt2 {
+    border-radius: 30px 0 0 30px;
+}
+.abi2 {
+    border-radius: 0 30px 30px 0;
+}
+.about-body-text p:first-child {
+    background-color: var(--blue);
+    padding: 15px 20px;
+    border-radius: 20px;
+    color: white;   
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/footer.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+
+    padding: 5%;
+}
+
+.footer-content p {
+    margin: 15px 0 20px;
 }
