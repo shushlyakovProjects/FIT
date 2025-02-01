@@ -75,6 +75,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     padding-left: 5%;
+    padding-right: 5%;
 }
 
 .welcome_content {

@@ -23,7 +23,7 @@ html {
     font-size: 16px;
 }
 
-h1 {font-size: 2rem;}
+h1 {font-size: 1.8rem;}
 
 p {font-size: 1rem;}
 
@@ -45,7 +45,7 @@ button {
     color: var(--white);
     background-color: var(--blue);
 
-    font-size: 17px;
+    font-size: 1.1rem;
     padding: 12px;
     border-radius: 50px;
     
