@@ -20,14 +20,20 @@ window.addEventListener('scroll', (event) => {
     const levelScroll = window.scrollY
     const scrollHeight = document.documentElement.scrollHeight
 
-
-    if (levelScroll + window.innerHeight > scrollHeight - 200) {
+    if (levelScroll + window.innerHeight > scrollHeight - 175) {
         header.style.bottom = `15px`
         header.innerHTML = `
-            <div class="logo">
-            <div class="logo_left">
-                <p>FIT</p>
-            </div>`
+        <div class="footer-header">
+            <div class="date_footer">
+                <p>02.01.25</p>
+            </div>
+            <div class="logo_center">
+                <a href="#">FIT</a>
+            </div>
+            <div class="company_footer">
+                <p>CODDY</p>
+            </div>
+        </div>`
     } else {
         header.style.bottom = `90%`
         header.innerHTML = `
