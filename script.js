@@ -15,7 +15,38 @@ collectionItem.forEach((item) => {
 })
 
 const header = document.querySelector('header')
+const footer = document.querySelector('footer')
 window.addEventListener('scroll', (event) => {
+    let Y = header.getBoundingClientRect(header).bottom
+    let block = document.elementFromPoint(500, Y)
+    console.log(block);
+    if (block == footer) {
+        header.style.bottom = `0`
+        header.innerHTML = `
+        <div class="logo">
+        <div class="logo_left">
+            <p>FIT</p>
+        </div>`
+    }
+    else {
+        header.style.bottom = `90%`
+        header.innerHTML = `
+            <div class="logo">
+        <div class="logo_left">
+            <p>FIT</p>
+        </div>
+        <div class="logo_right">
+            <p>Инвестиции<br>в IT - стартапы</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#">Проекты</a>
+        <a href="#">Как это работает</a>
+        <a href="#">Стартапу</a>
+        <a href="#">Контакты</a>
+    </nav>
+    `
+    }
     if (window.scrollY > 30) {
         header.style.backgroundColor = `white`
         header.style.borderRadius = `40px`
