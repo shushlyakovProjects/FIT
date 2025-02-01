@@ -1,3 +1,22 @@
+@media (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+
+    :root {
+        --side-padding: 5%;
+    }
+
+    .info_body {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 20px;
+    }
+
+    .ibig {
+        grid-column-start: span 1;
+    }
+}
 @media (min-width: 1000px) {
     #menuOpen {
         display: none;
