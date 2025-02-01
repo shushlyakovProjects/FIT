@@ -15,62 +15,44 @@ collectionItem.forEach((item) => {
 })
 
 const header = document.querySelector('header')
+const botomHeader = document.querySelector('.botomHeader')
 const footer = document.querySelector('footer')
 window.addEventListener('scroll', (event) => {
     const levelScroll = window.scrollY
     const scrollHeight = document.documentElement.scrollHeight
 
     if (levelScroll + window.innerHeight > scrollHeight - 175) {
-        header.style.bottom = `15px`
-        header.innerHTML = `
-        <div class="footer-header">
-            <div class="date_footer">
-                <p>02.01.25</p>
-            </div>
-            <div class="logo_center">
-                <a href="#">FIT</a>
-            </div>
-            <div class="company_footer">
-                <p>CODDY</p>
-            </div>
-        </div>`
+        header.style.transform = `translateY(-200%)`
+        botomHeader.style.transform = `translateY(0)`
     } else {
-        header.style.bottom = `90%`
-        header.innerHTML = `
-            <div class="logo">
-        <div class="logo_left">
-            <p>FIT</p>
-        </div>
-        <div class="logo_right">
-            <p>Инвестиции<br>в IT - стартапы</p>
-        </div>
-    </div>
-    <nav>
-        <a href="#">Проекты</a>
-        <a href="#">Как это работает</a>
-        <a href="#">Стартапу</a>
-        <a href="#">Контакты</a>
-    </nav>
-    `
+        header.style.transform = `translateY(0%)`
+        botomHeader.style.transform = `translateY(150%)`
     }
-
 
     if (window.scrollY > 30) {
-        header.style.backgroundColor = `white`
-        header.style.borderRadius = `40px`
-        header.style.padding = `7px 8%`
-        header.style.marginTop = `20px`
+        header.classList.add('headerIsMoving')
     }
     else {
-        header.style.backgroundColor = `transparent`
-        header.style.borderRadius = `0`
-        header.style.padding = `15px 8%`
-        header.style.marginTop = `0`
+        header.classList.remove('headerIsMoving')
     }
 })
 if (window.scrollY > 30) {
-    header.style.backgroundColor = `white`
-    header.style.borderRadius = `40px`
-    header.style.padding = `7px 8%`
-    header.style.marginTop = `20px`
+    header.classList.add('headerIsMoving')
+}
+const menuOpen = document.querySelector('#menuOpen')
+const menuClose = document.querySelector('#menuClose')
+const aside = document.querySelector('aside')
+menuOpen.onclick = function () {
+    aside.classList.add('menuIsOpen')
+}
+menuClose.onclick = function () {
+    aside.classList.remove('menuIsOpen')
+}
+const back = document.querySelector('.logo_center p')
+back.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
 }

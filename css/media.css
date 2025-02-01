@@ -17,13 +17,26 @@
         grid-column-start: span 1;
     }
 }
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     #menuOpen {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #menuOpen {
+        display: block;
+    }
+    header nav {
         display: none;
     }
 }
 @media (max-width: 1350px) {
     .welcome {
         margin-top: 20px;
+    }
+}
+@media (max-width: 900px) {
+    .welcome {
+        margin-top: 40px;
     }
 }

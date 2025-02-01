@@ -327,11 +327,96 @@ footer {
 .date_footer p {
     font-size: 20px;
 }
-.logo_center a {
+.logo_center p {
     font-size: 40px;
-    text-decoration: none;
     color: black;
 }
 .company_footer p {
     font-size: 20px;
+}
+
+/* Menu */
+aside {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transform-origin: 0.5s;
+    transform: translateY(-100%);
+}
+aside nav {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+aside nav a {
+    font-size: 25px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    transition-duration: 0.5;
+}
+aside nav a:hover {
+    background-color: white;
+    color: black;
+}
+aside button {
+    background-color: transparent;
+    font-size: 60px;
+    color: black;
+    transition-duration: 0.5s;
+}
+aside button:hover {
+    color: red;
+    transform: rotate(180deg);
+}
+.menuIsOpen {
+    transform: translateY(0);
+}
+#menuOpen {
+    background-color: transparent;
+    color: black;
+    font-size: 25px;
+}
+#menuOpen:hover {
+    transform: rotate(90deg);
+}
+.botomHeader {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px var(--side-padding);
+    position: fixed;
+    bottom: 20px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 20px;
+    z-index: 100;
+    transition-duration: 0.5s;
+
+    transform: translateY(150%);
+}
+
+.headerIsMoving {
+    background-color: white;
+    border-radius: 40px;
+    padding: 7px var(--side-padding);
+    margin-top: 20px;
 }
