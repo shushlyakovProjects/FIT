@@ -1,0 +1,10 @@
+@media (min-width: 1000px) {
+    #menuOpen {
+        display: none;
+    }
+}
+@media (max-width: 1350px) {
+    .welcome {
+        margin-top: 20px;
+    }
+}
