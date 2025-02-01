@@ -17,18 +17,18 @@ collectionItem.forEach((item) => {
 const header = document.querySelector('header')
 const footer = document.querySelector('footer')
 window.addEventListener('scroll', (event) => {
-    let Y = header.getBoundingClientRect(header).bottom
-    let block = document.elementFromPoint(500, Y)
-    console.log(block);
-    if (block == footer) {
-        header.style.bottom = `0`
+    const levelScroll = window.scrollY
+    const scrollHeight = document.documentElement.scrollHeight
+
+
+    if (levelScroll + window.innerHeight > scrollHeight - 200) {
+        header.style.bottom = `15px`
         header.innerHTML = `
-        <div class="logo">
-        <div class="logo_left">
-            <p>FIT</p>
-        </div>`
-    }
-    else {
+            <div class="logo">
+            <div class="logo_left">
+                <p>FIT</p>
+            </div>`
+    } else {
         header.style.bottom = `90%`
         header.innerHTML = `
             <div class="logo">
@@ -47,6 +47,8 @@ window.addEventListener('scroll', (event) => {
     </nav>
     `
     }
+
+
     if (window.scrollY > 30) {
         header.style.backgroundColor = `white`
         header.style.borderRadius = `40px`
