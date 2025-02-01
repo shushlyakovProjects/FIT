@@ -6,7 +6,9 @@
     :root {
         --side-padding: 5%;
     }
+}
 
+@media (max-width: 1000px) {
     .info_body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -15,5 +17,58 @@
 
     .ibig {
         grid-column-start: span 1;
+    }
+
+    .about-body-text {
+        height: auto;
+    }
+
+    .about-body-img {
+        height: 100%;
+    }
+
+    :root {
+        --side-padding: 6%;
+    }
+
+    .footer-content {
+        width: 70%;
+    }
+
+    .info_item {
+        height: 25vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-content {
+        padding: 50px;
+        width: 90%;
+    }
+
+    .about-body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+        row-gap: 20px;
+    }
+
+    .about-body > div {
+        border-radius: 20px;
+    }
+
+    .abt2 {
+        grid-row: 4/5;
+    }
+
+    .abi2 {
+        grid-row: 3/4;
+    } 
+}
+
+@media (max-width: 500px) {
+    .footer-content {
+        padding: 50px;
+        width: 90%;
     }
 }
